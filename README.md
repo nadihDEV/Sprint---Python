@@ -1,6 +1,5 @@
 import pandas as pd
 
-# Dados do quiz
 dados_quiz = {
     "Pergunta": [
         "Qual foi a primeira temporada da Fórmula E?",
@@ -34,7 +33,6 @@ dados_quiz = {
     ]
 }
 
-# Criando o DataFrame
 df_quiz = pd.DataFrame(dados_quiz)
 
 def coletar_informacoes():
@@ -74,9 +72,7 @@ def fazer_quiz(df, nome):
     print(f"Você acertou {score} de {total_perguntas} perguntas corretamente.")
     print(f"Sua pontuação final: {score / total_perguntas * 100:.2f}%")
 
-# Coletando informações do usuário
 nome, idade, email = coletar_informacoes()
 
-# Executando o quiz
 fazer_quiz(df_quiz, nome)
 
